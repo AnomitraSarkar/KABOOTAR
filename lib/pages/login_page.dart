@@ -8,6 +8,9 @@ class LoginPage extends StatelessWidget {
 
   LoginPage({super.key});
 
+  // login method
+  void login() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,10 +54,28 @@ class LoginPage extends StatelessWidget {
 
             const SizedBox(height: 25),
             // login button
-            MyButton(
-              text: "Login"
-            ),
+            MyButton(text: "Login", onTap: login),
             // register me
+            const SizedBox(height: 25),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Not a member? ",
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
+                Text(
+                  "Register Now",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
