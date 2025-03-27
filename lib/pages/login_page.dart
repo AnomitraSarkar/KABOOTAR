@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kabootar/auth/auth_service.dart';
 import 'package:kabootar/components/my_button.dart';
 import 'package:kabootar/components/my_textfield.dart';
 
@@ -12,7 +13,21 @@ class LoginPage extends StatelessWidget {
   LoginPage({super.key, required this.onTap});
 
   // login method
-  void login() {}
+  void login(BuildContext context) async {
+    final authService = AuthService();
+
+    try {
+      await authService.signInWithEmailPassword(
+        _emailController.text,
+        _pwController.text,
+      );
+    } catch (e) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(title: Text(e.toString())),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +72,7 @@ class LoginPage extends StatelessWidget {
 
             const SizedBox(height: 25),
             // login button
-            MyButton(text: "Login", onTap: login),
+            MyButton(text: "Login", onTap: () => login(context)),
             // register me
             const SizedBox(height: 25),
 
