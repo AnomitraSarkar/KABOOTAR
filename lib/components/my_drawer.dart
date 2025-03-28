@@ -35,7 +35,7 @@ class MyDrawer extends StatelessWidget {
             padding: const EdgeInsets.only(left: 25.0),
             child: ListTile(
               title: Text('H O M E'),
-              leading: Icon(Icons.home),
+              leading: Icon(Icons.home, color: Theme.of(context).colorScheme.primary,),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -46,7 +46,7 @@ class MyDrawer extends StatelessWidget {
             padding: const EdgeInsets.only(left: 25.0, bottom:25.0),
             child: ListTile(
               title: Text('S E T T I N G S'),
-              leading: Icon(Icons.settings),
+              leading: Icon(Icons.settings, color: Theme.of(context).colorScheme.primary ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>SettingsPage(),));
@@ -61,7 +61,7 @@ class MyDrawer extends StatelessWidget {
             padding: const EdgeInsets.only(left: 25.0),
             child: ListTile(
               title: Text('L O G O U T'),
-              leading: Icon(Icons.logout),
+              leading: Icon(Icons.logout, color: Theme.of(context).colorScheme.primary,),
               onTap:  logout,
             ),
           ),
