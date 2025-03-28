@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:kabootar/auth/auth_gate.dart';
-import 'package:kabootar/auth/login_or_register.dart';
+import 'package:kabootar/services/auth/auth_gate.dart';
+import 'package:kabootar/services/auth/login_or_register.dart';
 import 'package:kabootar/firebase_options.dart';
 import 'package:kabootar/themes/light_mode.dart';
 

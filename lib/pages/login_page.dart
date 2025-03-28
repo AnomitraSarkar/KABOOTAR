@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kabootar/auth/auth_service.dart';
+import 'package:kabootar/services/auth/auth_service.dart';
 import 'package:kabootar/components/my_button.dart';
 import 'package:kabootar/components/my_textfield.dart';
 
